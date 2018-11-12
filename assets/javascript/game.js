@@ -1,8 +1,12 @@
-var targetNumber = Math.floor(Math.random() * 100) + 2;
+var targetNumber = Math.floor(Math.random() * 80) + 20;
   $("#number-to-guess").text(targetNumber);
   var counter = 0;
-  // var numberOptions = [[Math.floor(Math.random() * 15) + 2]];
   var crystalPics = ["assets/images/GT1Blk.png", "assets/images/GT3Blu.png", "assets/images/GT2Red.png", "assets/images/GT4Gre.png"]
+  var reset = function(){
+    counter = 0;
+    targetNumber = Math.floor(Math.random() * 80) + 20;
+    $("#number-to-guess").text(targetNumber);
+  }
 
 
   
@@ -23,9 +27,11 @@ var targetNumber = Math.floor(Math.random() * 100) + 2;
 
     if (counter === targetNumber) {
       alert("You win!");
+      reset();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
+      reset();
     }
 
   });
