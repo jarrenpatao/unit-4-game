@@ -1,16 +1,16 @@
-var targetNumber = Math.floor(Math.random() * 80) + 20;
+var targetNumber = Math.floor(Math.random() * 50) + 30;
 
   $("#number-to-guess").text(targetNumber);
   var counter = 0;
   var crystalPics = ["assets/images/GT1Blk.png", "assets/images/GT3Blu.png", "assets/images/GT2Red.png", "assets/images/GT4Gre.png"]
   var reset = function(){
     counter = 0;
-    targetNumber = Math.floor(Math.random() * 80) + 20;
+    targetNumber = Math.floor(Math.random() * 50) + 30;
     $("#number-to-guess").text(targetNumber);
   }
  
   for (var i = 0; i < crystalPics.length; i++) {
-    var numberOptions = Math.floor(Math.random() * 15) + 2;
+    var numberOptions = Math.floor(Math.random() * 10) + 2;
     var imageCrystal = $("<img>");
     imageCrystal.addClass("crystal-image");
     imageCrystal.attr("src", crystalPics[i]);
